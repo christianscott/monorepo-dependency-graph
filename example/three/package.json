@@ -1,0 +1,6 @@
+{
+  "name": "three",
+  "dependencies": {
+    "four": "../four"
+  }
+}

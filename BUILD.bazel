@@ -1,0 +1,17 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
+
+ts_project(
+    name = "tsconfig",
+    srcs = [":main.ts"],
+    declaration = True,
+    declaration_map = True,
+    tsconfig = "//:tsconfig.json",
+    deps = ["@npm//@types/node"],
+)
+
+nodejs_binary(
+    name = "bin",
+    data = [":tsconfig"],
+    entry_point = ":main.ts",
+)

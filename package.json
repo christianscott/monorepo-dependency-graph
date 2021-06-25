@@ -1,0 +1,16 @@
+{
+  "name": "monorepo-dependency-graph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "bazel run :bin"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@bazel/typescript": "^3.6.0",
+    "@types/node": "^15.12.4",
+    "typescript": "^4.3.4"
+  }
+}
